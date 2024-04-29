@@ -1,14 +1,3 @@
----
-//@ts-ignore
-import Rol1 from "../components/rol1.astro";
-import Rol2 from "../components/rol2.astro";
-import Rol3 from "../components/rol3.astro";
-
-//Layouts
-
-import LoginBase from '../layouts/loginbase.astro';
----
-
 <html lang="es">
 	<head>
 		<meta charset="utf-8" />
@@ -36,12 +25,35 @@ import LoginBase from '../layouts/loginbase.astro';
 		</style>
 	</head>
 	<body class="bg-black poppins-regular">
-		<LoginBase>
-			<Rol1 href="/dashboard.astro" >
-				Usuario
-			</Rol1>
-			<Rol2/>
-			<Rol3/>
-		
+		<div class="bg-[#F2F5F6] h-screen mx-auto justify-center flex">
+			<div
+				class="flex h-[600px] bg-white p-10 m-auto rounded-xl shadow-md"
+			>
+				<div class="flex">
+					<div class="flex flex-col mx-auto px-28">
+						<img
+							class="h-36 w-40 mx-auto"
+							src="src/img/logov2.png"
+							alt=""
+						/>
+
+						<p
+							class="text-[#102c57] mb-8 mt-2 text-center text-2xl font-bold border-b-2"
+						>
+							Inicio de sesión
+						</p>
+						<slot />
+						
+					</div>
+				</div>
+				<div class="flex justify-center m-auto px-20">
+					<img
+						class="h-[400px] w-[400px]"
+						src="https://img.freepik.com/vector-gratis/personas-sanas-llevando-diferentes-iconos_53876-66139.jpg?size=626&ext=jpg&ga=GA1.1.672697106.1713139200&semt=ais"
+						alt=""
+					/>
+				</div>
+			</div>
+		</div>
 	</body>
 </html>
